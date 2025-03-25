@@ -7,11 +7,13 @@ import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
 import Signup from "./screens/Signup";
 import { useAuthStore } from "./store/useAuthStore";
+import { useThemeStore } from "./store/useThemeStore";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { theme } = useThemeStore();
 
   useEffect(() => {
     checkAuth();
@@ -26,7 +28,7 @@ const App = () => {
     );
 
   return (
-    <div>
+    <div data-theme={theme}>
       <Navbar />
       <Routes>
         <Route
@@ -47,7 +49,7 @@ const App = () => {
           element={authUser ? <Profile /> : <Navigate to="/login" />}
         />
       </Routes>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 };
