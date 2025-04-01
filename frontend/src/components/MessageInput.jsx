@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import React from "react";
+import { useState, useRef } from "react";
 import { useChatStore } from "../store/useChatStore";
 import { Image, Send, X } from "lucide-react";
 import toast from "react-hot-toast";
@@ -47,6 +48,7 @@ const MessageInput = () => {
     }
   };
 
+  
   return (
     <div className="p-4 w-full">
       {imagePreview && (
@@ -68,7 +70,6 @@ const MessageInput = () => {
           </div>
         </div>
       )}
-
       <form onSubmit={handleSendMessage} className="flex items-center gap-2">
         <div className="flex-1 flex gap-2">
           <input
@@ -106,4 +107,5 @@ const MessageInput = () => {
     </div>
   );
 };
+
 export default MessageInput;
