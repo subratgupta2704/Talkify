@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { MessageSquare, User, Mail, Eye, EyeOff, Lock } from "lucide-react";
+import { MessageSquare, Mail, Eye, EyeOff, Lock } from "lucide-react";
+import { User } from "lucide-react";
+
 import { useAuthStore } from "../store/useAuthStore.js";
 import { Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -59,7 +61,7 @@ const Signup = () => {
                 <span className="label-text font-medium">Full Name</span>
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                   <User className="size-5 text-base-content/40" />
                 </div>
                 <input
@@ -79,7 +81,7 @@ const Signup = () => {
                 <span className="label-text font-medium">Email</span>
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                   <Mail className="size-5 text-base-content/40" />
                 </div>
                 <input
@@ -99,7 +101,7 @@ const Signup = () => {
                 <span className="label-text font-medium">Password</span>
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                   <Lock className="size-5 text-base-content/40" />
                 </div>
                 <input
