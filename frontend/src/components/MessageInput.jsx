@@ -48,7 +48,6 @@ const MessageInput = () => {
     }
   };
 
-  
   return (
     <div className="p-4 w-full">
       {imagePreview && (
@@ -107,5 +106,4 @@ const MessageInput = () => {
     </div>
   );
 };
-
 export default MessageInput;
