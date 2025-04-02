@@ -5,14 +5,10 @@ import dotenv from 'dotenv';
 import { connectDB } from './lib/db.js';
 import cookieParser from 'cookie-parser';
 import cors from "cors";
+import { app, server } from './lib/socket.js';
 
 dotenv.config();
 
-const app = express();
-
-// Increase payload size limit to fix "413 Payload Too Large" error
-app.use(express.json({ limit: "10mb" }));
-app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 // Move CORS setup here
 app.use(cors({
@@ -30,7 +26,7 @@ app.use("/api/messages", messageRoutes);
 
 const PORT = process.env.PORT || 5001;
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
     connectDB();
 });
