@@ -11,27 +11,28 @@ import { useThemeStore } from "./store/useThemeStore";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 
-
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
   const { theme } = useThemeStore();
 
-  console.log({ onlineUsers });
+  // Dynamically set the theme attribute on the <html> element
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
-  console.log({ authUser });
 
   if (isCheckingAuth && !authUser)
     return (
-      <div className="flex-items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-screen">
         <Loader className="size-10 animate-spin" />
       </div>
     );
 
   return (
-    <div data-theme={theme}>
+    <div className="min-h-screen bg-[var(--background-color)] text-[var(--text-color)]">
       <Navbar />
       <Routes>
         <Route
