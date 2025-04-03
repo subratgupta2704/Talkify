@@ -55,7 +55,7 @@ const Signup = () => {
             </div>
           </div>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-2" onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-medium">Full Name</span>
