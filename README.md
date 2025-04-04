@@ -51,12 +51,12 @@ NODE_ENV=development
 ### Scripts
 
 - **Start the server:-**
-Run this in the root folder
+Run this in the root folder.
   ```bash
   npm run start
   ```
 
-- **Start the client:**
+- **Start the client:-**
 Run this in the /frontend folder.
   ```bash
   npm run start
