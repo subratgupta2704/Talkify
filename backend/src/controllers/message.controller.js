@@ -1,7 +1,7 @@
 import User from "../models/user.model.js";
 import Message from "../models/message.model.js";
 import cloudinary from "../lib/cloudinary.js";
-import {io,getReceiverSocketId} from "../lib/socket.js";
+import { io, getReceiverSocketId } from "../lib/socket.js";
 // Get all users except the logged in user
 
 export const getUsersForSidebar = async (req, res) => {
@@ -50,7 +50,9 @@ export const sendMessage = async (req, res) => {
     let imageUrl;
     if (image) {
       //Upload base 64 image to cloudinary
-      const uploadResponse = await cloudinary.uploader.upload(image);
+      const uploadResponse = await cloudinary.uploader.upload(image, {
+        folder: "Talkify/ChatImages",
+      });
       imageUrl = uploadResponse.secure_url;
     }
 

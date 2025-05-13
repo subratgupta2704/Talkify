@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useRef } from "react";
 import { useChatStore } from "../store/useChatStore";
 import { Image, Send, X } from "lucide-react";

@@ -102,7 +102,9 @@ export const updateProfile = async (req, res) => {
       return res.status(400).json({ message: "Profile Pic is required" });
     }
 
-    const uploadResponse = await cloudinary.uploader.upload(profilePic);
+    const uploadResponse = await cloudinary.uploader.upload(profilePic, {
+      folder: "Talkify/ProfileImage",
+    });
 
     const updatedUser = await User.findByIdAndUpdate(
       userId,
