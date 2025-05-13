@@ -15,7 +15,7 @@ Talkify is a real-time chat application built using the MERN (MongoDB, Express, 
 - 🧠 **State management** with Zustand
 - 🛠️ **Error handling & feedback** toasts
   
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Frontend :-**
   - React JS
