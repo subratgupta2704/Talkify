@@ -11,7 +11,7 @@ import path from "path";
 dotenv.config();
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5173" || "https://talkify-ie2o.onrender.com",
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }));
