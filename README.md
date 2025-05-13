@@ -39,7 +39,7 @@ Talkify is a real-time chat application built using the MERN (MongoDB, Express, 
 
 ### Installation
 
-To get the project up and running, follow these steps:
+To get the project up and running, follow these steps :-
 
 1. Clone the repository to your local machine.
   
@@ -55,22 +55,15 @@ To get the project up and running, follow these steps:
    NODE_ENV=development
    ```
 
-3. Build the project 
+### Scripts
 
+ **Build the project**
+  
    ```bash
    npm run build
    ```
 
-### Scripts
-
-- **Start the server:-**
-Run this in the root folder.
-  ```bash
-  npm run start
-  ```
-
-- **Start the client:-**
-Run this in the /frontend folder.
+ **Start the project**
   ```bash
   npm run start
   ```
